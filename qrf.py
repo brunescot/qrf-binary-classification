@@ -66,4 +66,4 @@ class RandomForestForQuantumPrediction:
                     node = node * 2 + 1
             node = node % (2 ** (tree.h - 1))
             p += tree.leaves_proba[node]
-        return p / 4
+        return p / self.n_trees
